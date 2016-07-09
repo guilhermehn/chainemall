@@ -1,0 +1,19 @@
+{
+  "name": "chainable",
+  "version": "1.0.0",
+  "description": "Chain 'em all!",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/"
+  },
+  "engines": {
+    "node": ">=6.2",
+    "npm": ">=3.8.2"
+  },
+  "author": "Guilherme Nagatomo",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
