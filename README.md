@@ -40,6 +40,14 @@ chainemall(context)
   .moveTo(20, 20)
   .lineTo(200, 20)
   .stroke()
+
+// You can pass returned values to the next method in the chain
+const chain = chainemall({
+  double: n => n * 2,
+  log: x => console.log(x)
+})
+
+chain.double(2).log()
 ~~~
 
 ## Why?
