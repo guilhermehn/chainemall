@@ -1,7 +1,7 @@
 # chainemall
 > Chain 'em all!
 
-## :warning: Not meant to use in production
+## :warning: Not meant to be used in production
 
 ## Install
 
