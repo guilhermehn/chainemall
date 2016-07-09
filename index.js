@@ -1,4 +1,4 @@
-function chainable(target) {
+function chainemall(target) {
   let lastValue = undefined
 
   return new Proxy(target, {
@@ -25,4 +25,4 @@ function chainable(target) {
   })
 }
 
-module.exports = chainable
+module.exports = chainemall

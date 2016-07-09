@@ -1,13 +1,13 @@
 const expect = require('chai').expect
-const chainable = require('..')
+const chainemall = require('..')
 
-describe('chainable(target)', () => {
+describe('chainemall(target)', () => {
   it('should be an object', () => {
-    expect(chainable({})).to.be.a('object')
+    expect(chainemall({})).to.be.a('object')
   })
 
   it('should throw a TypeError if it receives anything other than a object', () => {
-    expect(() => chainable(null)).to.throw(TypeError)
+    expect(() => chainemall(null)).to.throw(TypeError)
   })
 
   it('should proxy all the methods from the target', () => {
@@ -22,15 +22,15 @@ describe('chainable(target)', () => {
     }
 
     const originalMethods = Object.keys(target)
-    const proxyMethods = Object.keys(chainable(target))
+    const proxyMethods = Object.keys(chainemall(target))
 
     expect(proxyMethods).to.be.deep.equal(originalMethods)
   })
 
   it('should work with native objects', () => {
-    expect(chainable([]).filter).to.be.a('function')
-    expect(chainable(Object).keys).to.be.a('function')
-    expect(chainable(Math).pow).to.be.a('function')
+    expect(chainemall([]).filter).to.be.a('function')
+    expect(chainemall(Object).keys).to.be.a('function')
+    expect(chainemall(Math).pow).to.be.a('function')
   })
 
   it('should pass returned values to the next method in the chain', () => {
@@ -44,6 +44,6 @@ describe('chainable(target)', () => {
       }
     }
 
-    chainable(target).double(2).mustBe4()
+    chainemall(target).double(2).mustBe4()
   })
 })
